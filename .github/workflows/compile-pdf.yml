@@ -10,7 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: my-pub.tex
-          args: -bibtex
+          args: -bibtex -pdf -file-line-error -interaction=nonstopmode
       - name: Commit the new PDF
         run: |
           git config --local user.email "action@github.com"
