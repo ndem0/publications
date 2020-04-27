@@ -1,0 +1,13 @@
+@Inbook{CaloreDemoSchifanoTripiccione2016PPAM,
+    author = {Enrico Calore and Nicola Demo and Sebastiano Fabio Schifano and Raffaele Tripiccione},
+    title = {Experience on Vectorizing Lattice Boltzmann Kernels for Multi- and Many-Core Architectures},
+    booktitle = {Parallel Processing and Applied Mathematics},
+    year = {2016},
+    publisher = {Springer International Publishing},
+    pages = {53--62},
+    abstract = {Current development trends of fast processors calls for an increasing number of cores, each core featuring wide vector processing units. Applications must then exploit both directions of parallelism to run efficiently. In this work we focus on the efficient use of vector instructions. These process several data-elements in parallel, and memory data layout plays an important role to make this efficient. An optimal memory-layout depends in principle on the access patterns of the algorithm but also on the architectural features of the processor. However, different parts of the application may have different requirements, and then the choice of the most efficient data-structure for vectorization has to be carefully assessed. We address these problems for a Lattice Boltzmann (LB) code, widely used in computational fluid-dynamics. We consider a state-of-the-art two-dimensional LB model, that accurately reproduces the thermo-hydrodynamics of a 2D-fluid. We write our codes in C and expose vector parallelism using directive-based programming approach. We consider different data layouts and analyze the corresponding performance. Our results show that, if an appropriate data layout is selected, it is possible to write a code for this class of applications that is automatically vectorized and performance portable on several architectures. We end up with a single code that runs efficiently onto traditional multi-core processors as well as on recent many-core systems such as the Xeon-Phi.},
+    isbn = {978-3-319-32149-3},
+    doi = {10.1007/978-3-319-32149-3_6},
+    url = {https://doi.org/10.1007/978-3-319-32149-3_6},
+}
+
