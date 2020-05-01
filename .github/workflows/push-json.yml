@@ -1,0 +1,29 @@
+name: Create JSON file containing all publications
+on: [push]
+jobs:
+  push_json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Create the .json file from bibitems
+        run: |
+          python scripts/bib2json.py
+      - name: Commit the new PDF
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -b json
+          git add "publications.json"
+          git commit -m "Add JSON"
+      - name: Push the JSON file
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: json
