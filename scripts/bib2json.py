@@ -23,7 +23,7 @@ for filename in os.listdir('bibitems'):
 
     for key, value in m:
         if key and value: 
-            result[key.strip().lower()] = value.replace('{', '').replace('}', '')
+            result[key.strip().lower()] = value.replace('{', '').replace('}', '').strip()
 
     author = result['author']
     author_str = ''
