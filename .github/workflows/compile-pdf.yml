@@ -8,17 +8,17 @@ jobs:
         uses: actions/checkout@v1
       - name: Create the .bib file
         run: |
-          cat bibitems/*.bib > my-pub.bib 
+          cat bibitems/*.bib > demo.bib 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
-          root_file: my-pub.tex
+          root_file: nicolademo_publications.tex
           args: -bibtex -pdf -file-line-error -interaction=nonstopmode
       - name: Commit the new PDF
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add my-pub.pdf
+          git add nicolademo_publications.pdf
           git commit -m "Add changes"
       - name: Push the PDF
         uses: ad-m/github-push-action@master
