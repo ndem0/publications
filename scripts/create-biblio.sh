@@ -1,10 +1,10 @@
 #!/bin/bash
 
 BIBLIO='demo'
-TEX='my-pub'
+TEX='nicolademo_publications'
 
 rm -rf ${BIBLIO}.bib
-cat *.bib > ${BIBLIO}.bib
+cat bibitems/*.bib > ${BIBLIO}.bib
 
 pdflatex ${TEX}.tex 
 biber ${TEX}
