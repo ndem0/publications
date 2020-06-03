@@ -24,6 +24,7 @@ for filename in os.listdir('bibitems'):
     for key, value in m:
         if key and value: 
             result[key.strip().lower()] = value.replace('{', '').replace('}', '').strip()
+    print(result)
 
     author = result['author']
     author_str = ''
@@ -34,6 +35,7 @@ for filename in os.listdir('bibitems'):
     result['author'] = author_str
 
     json_list.append(result)
+    
 
 with open('publications.json', 'w') as f:
     json.dump(json_list, f)
