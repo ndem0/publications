@@ -24,7 +24,8 @@ for filename in os.listdir('bibitems'):
     for key, value in m:
         if key and value: 
             result[key.strip().lower()] = value.replace('{', '').replace('}', '').strip()
-    print(result)
+    for k, v in result.items():
+        print(k, v)
 
     author = result['author']
     author_str = ''
