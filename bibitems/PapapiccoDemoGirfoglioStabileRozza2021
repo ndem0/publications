@@ -1,0 +1,9 @@
+@article{PapapiccoDemoGirfoglioStabileRozza2021,
+    title = {The Neural Network shifted-Proper Orthogonal Decomposition: a Machine Learning Approach for Non-linear Reduction of Hyperbolic Equations},
+    author = {Davide Papapicco and Nicola Demo and Michele Girfoglio and Giovanni Stabile and Gianluigi Rozza},
+    year = {2021},
+    journal = {Submitted},
+    eprinttype  = {arXiv},
+    eprintclass = {math.NA},
+    eprint      = {2108.06558},
+}
